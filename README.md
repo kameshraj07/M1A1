@@ -1,49 +1,180 @@
-Job Market Skill Analyzer
-Project Overview
-The Job Market Skill Analyzer is a Python project that explores the skills requested across data and analytics job postings. It stores job-posting information, allows users to add new postings, cleans and processes skill data, analyzes skill frequency, searches for jobs by skill, and exports structured records to a CSV file.
+# 📊 Job Market Skill Analyzer
 
-This project demonstrates how Python data structures and basic data-processing techniques can be used to turn unstructured skill text into useful insights about the job market.
-Problem Statement
-A recruitment analytics team needs a compact Python tool to analyze skills requested across job postings for data and analytics roles. Each posting contains a job ID, role, company, and a text field listing the required skills.
+### Python Data Structures Project
 
-The project uses Python to manage these records, normalize skill text, identify frequently requested skills, and save cleaned data for further analysis.
-Dataset
-The notebook starts with a sample dataset containing five job postings:
-Job ID	Role	Company	Skills
-1	Data Analyst	ABC Corp	Excel, SQL, Python
-2	Data Scientist	XyZ Ltd	Python, ML, Statistics
-3	Business Analyst	DataWorks	Excel, SQL, PowerBI
-4	Data Engineer	InfraTech	Python, SQL, Spark
-5	ML Engineer	AI Labs	Python, ML, DeepLearning
+---
 
+## 📌 Project Overview
 
-New job postings can also be entered interactively while the notebook is running.
-Project Features
-1. Display job postings – Uses a for loop to print each job record in a readable format.
-2. Add new job postings – Collects role, company, and skills from the user and automatically generates the next job ID.
-3. Clean and normalize skills – Converts skill text to lowercase, replaces commas with spaces, and removes surrounding or extra whitespace where applied.
-4. Extract and count skills – Splits skill strings into individual tokens and calculates how frequently skills appear.
-5. Basic statistics and insights – Calculates the total number of job postings and unique skills, and examines job postings mentioning Python.
-6. Search jobs by skill – Provides a function to search job records for a requested skill.
-7. Filter roles using common skills – Uses Counter, filter(), and a lambda function to identify roles containing at least one skill that appears two or more times.
-8. Find unique skills – Uses a Python set to remove duplicate skills and displays the results alphabetically.
-9. Export cleaned data – Writes structured job records to job_skills.csv using Python's CSV module and exception handling.
-Python Concepts Used
-- Variables and data types
-- Dictionaries and lists
-- Sets and tuples
-- for loops and conditional statements
-- User input with input()
-- Functions and return values
-- String methods and text processing
-- List comprehensions
-- Lambda functions and filter()
-- collections.Counter for frequency counting
-- File handling with open()
-- CSV file operations using the csv module
-- Exception handling with try and except
-Technologies and Tools
-- Language: Python
-- Environment: Jupyter Notebook / Google Colab
-- Libraries: Python standard library (csv, collections.Counter)
-No external Python packages are required for the operations shown in this notebook.
+The **Job Market Skill Analyzer** is a Python-based project designed to analyze the skills required for different job roles in the data and analytics industry.
+
+This project helps organize job postings, add new job information, clean skill data, identify frequently requested skills, search for specific skills, and export the processed data into a CSV file.
+
+The main objective is to understand how Python data structures can be used for real-world data analysis.
+
+---
+
+## 🎯 Project Objectives
+
+- Store job posting information using Python dictionaries.
+- Add new job postings dynamically.
+- Clean and normalize skill data.
+- Extract individual skills from job postings.
+- Calculate the frequency of each skill.
+- Identify unique skills.
+- Search job postings based on specific skills.
+- Filter job roles using common skills.
+- Export cleaned data into a CSV file.
+
+---
+
+## 📂 Dataset Description
+
+The project uses a sample dataset containing five job postings.
+
+| Job ID | Job Role | Company |
+|--------|----------|---------|
+| 1 | Data Analyst | ABC Corp |
+| 2 | Data Scientist | XyZ Ltd |
+| 3 | Business Analyst | DataWorks |
+| 4 | Data Engineer | InfraTech |
+| 5 | ML Engineer | AI Labs |
+
+### Skills Included
+
+- Excel
+- SQL
+- Python
+- Machine Learning
+- Statistics
+- PowerBI
+- Spark
+- DeepLearning
+
+---
+
+## ⚙️ Project Implementation
+
+### 1. Display Job Postings
+Used a `for` loop to display job details in a readable format.
+
+### 2. Add New Job Postings
+Collected job role, company name, and skills through user input.
+
+Automatically generated new Job IDs.
+
+### 3. Clean and Normalize Skills
+Created a `clean_skills()` function to:
+- Convert text into lowercase.
+- Replace commas with spaces.
+- Remove unnecessary surrounding spaces.
+
+### 4. Skill Extraction and Frequency
+- Extracted individual skills.
+- Created a consolidated skill list.
+- Counted the frequency of each skill.
+- Identified the top five frequently requested skills.
+
+### 5. Basic Statistics and Insights
+Calculated:
+- Total number of job postings.
+- Number of unique skills.
+- Job postings mentioning Python.
+
+### 6. Skill Search Function
+Created a `find_jobs_by_skill()` function to search job postings using a specific skill.
+
+### 7. Lambda Filtering and List Comprehension
+Used:
+- Lambda functions
+- `filter()`
+- `Counter()`
+
+Identified job roles containing at least one commonly requested skill.
+
+### 8. Unique Skill Set
+Used Python sets to remove duplicate skills and displayed unique skills alphabetically.
+
+### 9. Save Data to CSV
+Used Python's CSV module to export cleaned job records into:
+
+`job_skills.csv`
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Programming language |
+| Jupyter Notebook | Development environment |
+| Dictionaries | Store job information |
+| Lists | Manage job records and skills |
+| Sets | Identify unique skills |
+| Functions | Reusable operations |
+| Lambda | Filtering operations |
+| Counter | Skill frequency analysis |
+| CSV | Export structured data |
+
+---
+
+## 🧠 Python Concepts Learned
+
+- Variables and Data Types
+- Lists and Dictionaries
+- Sets and Tuples
+- For Loops
+- Conditional Statements
+- Functions
+- String Manipulation
+- List Comprehension
+- Lambda Functions
+- Filter Functions
+- Collections Counter
+- File Handling
+- Exception Handling
+
+---
+
+## 📈 Expected Project Output
+
+The project generates:
+
+1. Job posting details.
+2. Updated job records.
+3. Cleaned skill information.
+4. Skill frequency counts.
+5. Total job statistics.
+6. Unique skill information.
+7. Job search results.
+8. Filtered job roles.
+9. CSV output file.
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone or download this repository.
+
+2. Open the Jupyter Notebook file.
+
+3. Run the notebook cells sequentially.
+
+4. Enter job posting details when requested.
+
+5. Search for skills such as Python, SQL, or Excel.
+
+6. Run the CSV export section.
+
+7. Check the generated `job_skills.csv` file.
+
+---
+
+## 📁 Project Structure
+
+```text
+Job-Market-Skill-Analyzer/
+│
+├── Assignment 1_PythonDataStructures.ipynb
+├── job_skills.csv
+└── README.md
